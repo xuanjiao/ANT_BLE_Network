@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/Style_Blue.qss</file>
+        <file>images/ANTicon.png</file>
+    </qresource>
+</RCC>
