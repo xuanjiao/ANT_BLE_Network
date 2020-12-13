@@ -1,15 +1,15 @@
 # Student project: Indoor localization based on two RF technologies: BLE and ANT (2018)
 
 # Table of content
-1.  Introduction 
+-   Introduction 
     -   Background
     -   Method
-2.  Usage
+-   Usage
     -   Experiment: Capture ANT RSSI value at different distances.
     -   Experiment: Capture BLE RSSI value at different distances.
 
 
-# 1. Introduction
+# Introduction
 
 ## Background
 The market of localization service is growing rapidly. The goal of the service is to identify the physical location of individuals or objects. GPS (Global Positioning System) is widely used in outdoor environment for determing the location. However, it is not a suitable solution of indoor localization, because the wall attenuates the GPS signal from satellites. 
@@ -30,7 +30,7 @@ Two way to access the poster abstract:
 1.  In this Git repository: Doc/ANT_Project_Presentation/ANT_Poster.pdf
 2.  In ACM digital library: https://dl.acm.org/doi/10.1145/3274783.3275217
 
-# 2. Usage
+# Usage
 
 The GUI software and the base station were used to capture ANT RSSI value at different distances. Before we start the experiment, we need to download a flash tool ''nRFgo Studio''
 
