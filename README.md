@@ -10,6 +10,7 @@
 
 GPS (Global Positioning System) is widely used in outdoor environment for determing the location. However, it is not a suitable solution of indoor localization, because the wall attenuates the GPS signal from satellites. Therefore, we consider two RF technologies: ANT and BLE. 
 
+# 2. Introduction
 The table compare the propaties of those two RF techlonodgies
 | Name | BLE| ANT|
 |------|---------|--------|
@@ -24,3 +25,14 @@ The table compare the propaties of those two RF techlonodgies
 | Effective throughput | Up to 1\.4 Mbps | Up to 60 kbps |
 | Applications| Wearables, automation, sensors, fitness, healthcare, toys, computer peripherals, remote controls, etc\. | Wireless sensors, hubs for sports, fitness, healthcare |
 
+
+# 3. Installation
+
+## 1. Preparation
+
+1.  Download programming tool nRFgo Studio https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRFgo-Studio
+2.  
+## 2. Flash the firmware (softdevice and application) for nRF52 SoC 
+1. Use nRFgo to flash softdevice for all nRF52 nodes. The software are located in firmware212/ANT_s212_nrf52_5.0.0.hex
+2. Flash application RF2450.hex (node for channel 0)- RF2520.hex(node for channel 7)
+## 3. Open GUI software in Host PC
