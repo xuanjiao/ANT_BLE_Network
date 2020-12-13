@@ -21,10 +21,14 @@ Several alternatives have been developed over the years, including vision-based 
 We measured the received signal strength indicator (RSSI), values that are captured at different distances ranging from 20 cm to 5 m. To reduce the experimental variates, we performed the experiment in a large empty lab space without obstacles. Besides, we only use two nRF52 modules: one acted as the base station, another acted as the beacon. 
 
 ![experiment](Doc/Presentation/experiment.png)
+
 After collecting RSSI data, we analize the RSSI distribution at different distance. Forethermore, we implemented a simple fingerprint-based localization algorithm based on RADAR. We used the first 500 measurement data at each distance as training set and the remaining 500 values to perform 500 localization attempts. 
 
-For more details please refer to the poster.
--   Poster: Doc/ANT_Project_Presentation/ANT_Poster.pdf
+For more details please refer to the poster abstract.
+
+Two way to access the poster abstract: 
+1.  In this Git repository: Doc/ANT_Project_Presentation/ANT_Poster.pdf
+2.  In ACM digital library: https://dl.acm.org/doi/10.1145/3274783.3275217
 
 # 2. Usage
 
