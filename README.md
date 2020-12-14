@@ -1,7 +1,7 @@
-# Student project: Indoor localization based on two RF technologies: BLE and ANT (2018)
+# RF Technologies for Indoor Localization and Positioning (2018)
 
 # Overview
-Firmwares and a GUI software designed for evaluating two RF technologies: ANT and BLE.
+Firmwares and a GUI software designed for comparing RF technologies (BLE and ANT) for indoor localization.
 
 
 # Prerequisites
@@ -48,8 +48,9 @@ The user can click the ''ANT'' bottum to enter the ANT widget or click the ''BLE
 ![main_window](Doc/github/GUI_main.png)
 
 ### ANT widget
-Firstly the user should connect the nRF52 DK to the laptop via USB. Secondly, the user can configure the file setting, USB setting and click ''Connect'' bottom. Then the device details will be shown in the left text view and the received messages will be printed on the right text view. Also, the user can send an eight-byte ANT messages to beacons. 
+Firstly the user should connect the nRF52 DK to the laptop via USB. Secondly, the user can configure the file setting and serial port setting and click ''Connect'' bottom. Then the device details will be shown in the left text view. Once the base station find the broadcasting beacon, the received messages will be printed on the right text view and the RSSI values will be printed on the table view. Also, the user can send an eight-byte ANT messages to beacons. 
 ![ant](Doc/github/GUI_ANT.png)
 
 ### BLE widget
+Similar to ANT widget, the user should firstly connect the nRF52 DK to the laptop via USB. Secondly, the user can enter the file name and choose a serial port and then click ''Connect'' bottom. The measured RSSI values will be printed on the text view.
 ![ant](Doc/github/GUI_BLE.png)
