@@ -35,10 +35,21 @@ In the multi-channel solution, multiple beacons broadcast with different radio f
 
 ## Fingleprinting localization
 The fingleprint localization is mainly divided into two phases:
--   Offline training phase: Gathering RSSI values at known locations. Establishing a fingleprint database for mapping of RSSI and sampling positions.
--   Online localization phase: Measuring the RSSI value of multiple beacons and find the matching positions in the fingleprint database.
+-   Offline training phase: Gather RSSI values at known locations and establish a fingleprint database for mapping of RSSI and sampling positions.
+-   Online localization phase: Measure the RSSI value of multiple beacons and find the matching position in the fingleprint database.
 
 We implemented a simple fingerprint-based localization senario and evaluated the performace of BLE and ANT. The experiment results suggest that ANT-based-fingleprinting-localization can clearly outperform BLE. For more details please refer to the poster abstract [PDF](Doc/ANT_Poster.pdf)
-or [ACM digital library](https://dl.acm.org/doi/10.1145/3274783.3275217)
+or [ACM_digital_library](https://dl.acm.org/doi/10.1145/3274783.3275217)
 
-## Main GUI windows
+# Window and dialog widgets
+
+### Main window
+The user can click the ''ANT'' bottum to enter the ANT widget or click the ''BLE'' bottum to enter the BLE widget.
+![main_window](Doc/github/GUI_main.png)
+
+### ANT widget
+Firstly the user should connect the nRF52 DK to the laptop via USB. Secondly, the user can configure the file setting, USB setting and click ''Connect'' bottom. Then the device details will be shown in the left text view and the received messages will be printed on the right text view. Also, the user can send an eight-byte ANT messages to beacons. 
+![ant](Doc/github/GUI_ANT.png)
+
+### BLE widget
+![ant](Doc/github/GUI_BLE.png)
