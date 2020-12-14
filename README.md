@@ -1,47 +1,46 @@
 # Student project: Indoor localization based on two RF technologies: BLE and ANT (2018)
 
-# Table of content
--   Introduction 
-    -   Background
-    -   Method
--   Usage
-    -   Experiment: Capture ANT RSSI value at different distances.
-    -   Experiment: Capture BLE RSSI value at different distances.
+# Overview
+Firmwares and a GUI software designed for evaluating two RF technologies: ANT and BLE.
 
 
-# Introduction
+# Prerequisites
+-   [D52QM6 SoC modules](https://www.thisisant.com/developer/components/d52)
+-   [nRF52 DK](https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52-DK/Getting-Started)
 
-## Background
-The market of localization service is growing rapidly. The goal of the service is to identify the physical location of individuals or objects. GPS (Global Positioning System) is widely used in outdoor environment for determing the location. However, it is not a suitable solution of indoor localization, because the wall attenuates the GPS signal from satellites. 
+-   [Qt](https://www.qt.io)
+-   [SEGGER J-Link](https://www.segger.com/downloads/jlink/) 
+-   [Keil MDK (nRF_DeviceFamily)](https://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/)
 
-Several alternatives have been developed over the years, including vision-based and radio fre- quency (RF)-based technologies. We reported on our experiments with two RF technologies: ANT and BLE, and their performance in indoor environments.
+# Installation
 
-##  Method
-
-We measured the received signal strength indicator (RSSI), values that are captured at different distances ranging from 20 cm to 5 m. To reduce the experimental variates, we performed the experiment in a large empty lab space without obstacles. Besides, we only use two nRF52 modules: one acted as the base station, another acted as the beacon. 
-
-![experiment](Doc/Presentation/experiment.png)
-
-After collecting RSSI data, we analize the RSSI distribution at different distance. Forethermore, we implemented a simple fingerprint-based localization algorithm based on RADAR. We used the first 500 measurement data at each distance as training set and the remaining 500 values to perform 500 localization attempts. 
-
-For more details please refer to the poster abstract.
-
-Two way to access the poster abstract: 
-1.  In this Git repository: Doc/ANT_Project_Presentation/ANT_Poster.pdf
-2.  In ACM digital library: https://dl.acm.org/doi/10.1145/3274783.3275217
+`git clone https://github.com/xuanjiao/ANT_BLE_localization.git`
 
 # Usage
 
-The GUI software and the base station were used to capture ANT RSSI value at different distances. Before we start the experiment, we need to download a flash tool ''nRFgo Studio''
+## The basic setup 
+The picture below is a basic experiment setup. This set up can collect received signal strength indicator (RSSI) value at different distances ranging from 20 cm to 5 m. To reduce the experimental variates, it is recommanded to perform the experiment in a large empty lab space without obstacles. 
+-   A beacon (D52QM6 SoC) periodically sends messages. 
+-   A base station (nRF52 DK) connected to a laptop via USB. It measures the RSSI values.
 
--   Download Link for ''nRFgo Studio'': https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRFgo-Studio
+![Basic Setup](Doc/github/basic_setup.png)
+
+## The advance setup
+
+
+![advance setup](Doc/github/advance_setup.jpg)
+
+
+## Fingleprinting Localization based on RSSI value
+For more details please refer to the poster abstract [PDF](Doc/ANT_Poster.pdf)
+or [ACM digital library](https://dl.acm.org/doi/10.1145/3274783.3275217)
 
 ## Experiment: Capture ANT RSSI value at different distances.
 
 
 1. **Flash the firmwares**. 
 
-We nRF52 DK as base station, SoC(D52QD2M6IA-A) as nodes. Then we use programming tool ''nRF52go Studio'' to flash firmwares (softdevice and application) for the base station and the nodes.
+    We nRF52 DK as base station, SoC(D52QD2M6IA-A) as nodes. Then we use programming tool ''nRF52go Studio'' to flash firmwares (softdevice and application) for the base station and the nodes.
 
 For the base station:
 -   Softdevice: ''gcc_ANT_firmware_212/base/ANT_s212_nrf52_1.0.2.hex''
